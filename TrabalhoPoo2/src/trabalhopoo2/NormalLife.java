@@ -12,6 +12,8 @@ public class NormalLife extends LifeState{
     
     public NormalLife(Personagem personagem){
         super(personagem);
+        personagem.setCorre(new CorridaMedia());
+        personagem.setAtaque(new AtaqueMedio());
     }
     
     @Override
@@ -22,13 +24,11 @@ public class NormalLife extends LifeState{
     
     @Override
     protected void verificarAlteracaoEstado() {
-        if(this.getPersonagem().getLife() < this.getLifeMinima()){
+        if(this.getPersonagem().getLife() <= this.getLifeMinima()){
             this.getPersonagem().setEstado(new PerigoLife(this.getPersonagem()));
             this.getPersonagem().getEstado().verificarAlteracaoEstado();
-            
-        }else if(this.getPersonagem().getLife() > this.getLifeMaxima()){
+        }else if(this.getPersonagem().getLife() >= this.getLifeMaxima()){
             this.getPersonagem().setEstado(new ForteLife(this.getPersonagem()));
-
         }
     }
     

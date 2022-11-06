@@ -32,7 +32,7 @@ public class Personagem {
     }
     
     public int getLife() {
-        return life;
+        return this.life;
     }
 
     public void setLife(int life) {
@@ -40,7 +40,7 @@ public class Personagem {
     }
 
     public LifeState getEstado() {
-        return estado;
+        return this.estado;
     }
 
     public void setEstado(LifeState estado) {
@@ -63,13 +63,18 @@ public class Personagem {
         System.out.println("Life anterior: " + this.life);
         estado.sofrerAtaque(lifePerdida);
         System.out.println("Life atual: " + this.life);
-
+        System.out.println("Estado de life atual: " + this.estado.getClass().getSimpleName());
+        System.out.println("Tipo ataque: " + this.at.getClass().getSimpleName());
+        System.out.println("Tipo Corrida: " + this.co.getClass().getSimpleName() + "\n");
     }
     
     public void recolherRecompensa(int lifeGanha){
         System.out.println("Life anterior: " + this.life);
         estado.recolherRecompensa(lifeGanha);
         System.out.println("Life atual: " + this.life);
+        System.out.println("Estado de life atual: " + this.estado.getClass().getSimpleName());
+        System.out.println("Tipo ataque: " + this.at.getClass().getSimpleName());
+        System.out.println("Tipo Corrida: " + this.co.getClass().getSimpleName() + "\n");
     }
     
     

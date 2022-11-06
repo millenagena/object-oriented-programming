@@ -20,11 +20,21 @@ public abstract class LifeState {
     protected abstract void verificarAlteracaoEstado();
     
     public void sofrerAtaque(int lifePerdida) {
-        this.getPersonagem().setLife(this.getPersonagem().getLife() - lifePerdida);
+        if(this.getPersonagem().getLife() - lifePerdida < 0){
+            this.getPersonagem().setLife(0);
+        }else{
+            this.getPersonagem().setLife(this.getPersonagem().getLife() - lifePerdida);
+        }
+        this.verificarAlteracaoEstado();
     }
 
     public void recolherRecompensa(int lifeGanha) {
-        this.getPersonagem().setLife(this.getPersonagem().getLife() + lifeGanha);
+        if(this.getPersonagem().getLife() + lifeGanha > 100){
+            this.getPersonagem().setLife(100);
+        }else{
+            this.getPersonagem().setLife(this.getPersonagem().getLife() + lifeGanha); 
+        }
+        this.verificarAlteracaoEstado();
     }
 
     public int getLifeMinima() {

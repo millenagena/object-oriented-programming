@@ -7,13 +7,14 @@ package trabalhopoo2;
 /**
  *
  */
-public class TrabalhoPoo2 {
+public class Principal {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        // testando o Strategy
         Personagem1 p1 = new Personagem1();
         Personagem2 p2 = new Personagem2();
         Personagem3 p3 = new Personagem3();
@@ -25,6 +26,13 @@ public class TrabalhoPoo2 {
         p1.pular();
         p2.correr();
         p3.atacar();
+        
+        // testando o State
+        System.out.println();
+        p1.sofrerAtaque(50); // vai pra perigo
+        p1.recolherRecompensa(100); // vai pra forte
+        p1.sofrerAtaque(40); // vai pra normal
+        p1.sofrerAtaque(80); // vai pra morto
     }
     
 }

@@ -16,11 +16,15 @@ public class MortoLife extends LifeState{
 
     @Override
     protected void setLimites() {
-
+        this.setLifeMinima(0);
+        this.setLifeMaxima(0);
     }
 
     @Override
     protected void verificarAlteracaoEstado() {
-
+        if(this.getPersonagem().getLife() > this.getLifeMaxima()){
+            this.getPersonagem().setEstado(new PerigoLife(this.getPersonagem()));
+            this.getPersonagem().getEstado().verificarAlteracaoEstado();
+        }
     }
 }

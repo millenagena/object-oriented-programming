@@ -9,6 +9,7 @@ package trabalhopoo2;
  */
 public class Personagem1 extends Personagem {
     public Personagem1(){
+        super();
         setPulo(new PuloMedio());
         setCorre(new CorridaMedia());
         setAtaque(new AtaqueForte());
