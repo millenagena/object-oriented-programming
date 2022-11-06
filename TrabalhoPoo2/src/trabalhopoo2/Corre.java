@@ -6,7 +6,6 @@ package trabalhopoo2;
 
 /**
  *
- * @author lucas
  */
 public abstract class Corre {
     public abstract void correr();

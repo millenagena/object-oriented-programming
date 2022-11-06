@@ -6,7 +6,6 @@ package trabalhopoo2;
 
 /**
  *
- * @author lucas
  */
 public class CorridaRapida extends Corre {
     @Override

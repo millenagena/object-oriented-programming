@@ -6,7 +6,6 @@ package trabalhopoo2;
 
 /**
  *
- * @author lucas
  */
 public class Personagem2 extends Personagem {
     public Personagem2(){
