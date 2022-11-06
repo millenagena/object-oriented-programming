@@ -15,6 +15,17 @@ public class TrabalhoPoo2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Personagem1 p1 = new Personagem1();
+        Personagem2 p2 = new Personagem2();
+        Personagem3 p3 = new Personagem3();
+        
+        p1.atacar();
+        p2.pular();
+        p3.correr();
+        
+        p1.pular();
+        p2.correr();
+        p3.atacar();
     }
     
 }
