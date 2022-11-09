@@ -19,6 +19,8 @@ public class Principal {
         Personagem2 p2 = new Personagem2();
         Personagem3 p3 = new Personagem3();
         
+        System.out.println("\n=== REALIZANDO ACOES (atacar, pular e correr) === \n");
+        
         p1.atacar();
         p2.pular();
         p3.correr();
@@ -28,11 +30,39 @@ public class Principal {
         p3.atacar();
         
         // testando o State
-        System.out.println();
+        
+        System.out.println("\n=== ALTERANDO A LIFE (ganhando recompensa, sofrendo ataques) === \n");
+        
         p1.sofrerAtaque(50); // vai pra perigo
         p1.recolherRecompensa(100); // vai pra forte
         p1.sofrerAtaque(40); // vai pra normal
         p1.sofrerAtaque(80); // vai pra morto
+        
+        // testando o chain of responsability
+        
+        System.out.println("\n=== UTILIZANDO OS ESCUDOS === \n");
+        
+        Personagem1 p4 = new Personagem1();
+        
+        p4.coletarEscudo("ouro", 1); // 10 de protecao
+        p4.coletarEscudo("prata", 1); // 5 de protecao
+        p4.coletarEscudo("bronze", 2); // 4 de protecao
+        
+        // instanciando os objetos da cadeia
+        Escudo escudoOuro = new EscudoOuro();
+        Escudo escudoPrata = new EscudoPrata();
+        Escudo escudoBronze = new EscudoBronze();
+        
+        //  encadeando os objetos da cadeia
+        escudoOuro.setSucessor(escudoPrata);
+        escudoPrata.setSucessor(escudoBronze);
+        escudoBronze.setSucessor(null);
+        
+        // processando os escudos
+        escudoOuro.processaAtaque(p4, 60); // vai pra life perigo 29%
+        escudoOuro.processaAtaque(p4, 100); // morreu
+
+
     }
     
 }
