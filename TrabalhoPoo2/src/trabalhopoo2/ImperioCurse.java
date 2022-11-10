@@ -13,8 +13,7 @@ public class ImperioCurse extends AtaqueDecorador{
     public ImperioCurse(Ataque ataqueDecorador) {
         super(ataqueDecorador);
         setValorDano(10);
+        setDescricao("\n Poder: Imperio");
     }
-    
-    
     
 }

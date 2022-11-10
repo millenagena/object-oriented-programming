@@ -10,11 +10,7 @@ package trabalhopoo2;
 public class AtaqueFraco extends Ataque {
     
     public AtaqueFraco(){
-        setValorDano(5);
-    }
-    
-    @Override
-    public void atacar(){
-        System.out.println("ATACANDO FRACO: " + getValorDano());
+        this.setValorDano(2);
+        this.setDescricao("Atacando Fraco");
     }
 }

@@ -10,11 +10,7 @@ package trabalhopoo2;
 public class AtaqueForte extends Ataque {
     
     public AtaqueForte(){
-        setValorDano(10);
-    }
-    
-    @Override
-    public void atacar(){
-        System.out.println("ATACANDO FORTEEE: " + getValorDano());
+        this.setValorDano(10);
+        this.setDescricao("Atacando forte ");
     }
 }

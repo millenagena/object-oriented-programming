@@ -12,5 +12,7 @@ public class CruciatusCurse extends AtaqueDecorador{
     public CruciatusCurse(Ataque ataqueDecorador) {
         super(ataqueDecorador);
         setValorDano(20);
+        setDescricao("\nPoder usado: Cruciatus");
     }
+    
 }

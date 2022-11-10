@@ -12,5 +12,7 @@ public class AvadaKedavraCurse extends AtaqueDecorador{
     public AvadaKedavraCurse(Ataque ataqueDecorador) {
         super(ataqueDecorador);
         setValorDano(30);
+        setDescricao("\nPoder usado: Avada Kedavra");
     }
+    
 }

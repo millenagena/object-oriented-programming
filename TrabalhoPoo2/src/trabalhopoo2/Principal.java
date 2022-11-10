@@ -61,6 +61,15 @@ public class Principal {
         // processando os escudos
         escudoOuro.processaAtaque(p4, 60); // vai pra life perigo 29%
         escudoOuro.processaAtaque(p4, 100); // morreu
+        
+        System.out.println("\n======= TESTE DECORATOR ======\n");
+        
+        Ataque ataqueTeste = new AtaqueForte();
+        ataqueTeste = new CruciatusCurse(ataqueTeste);
+        ataqueTeste = new AvadaKedavraCurse(ataqueTeste);
+        Personagem1 p7 = new Personagem1();
+        p7.setAtaque(ataqueTeste);
+        p7.atacar();
 
 
     }

@@ -8,8 +8,8 @@ package trabalhopoo2;
  *
  */
 public abstract class Ataque {
-    
-    private int valorDano;
+    private int valorDano;    
+    private String descricao;
 
     public int getValorDano() {
         return this.valorDano;
@@ -19,5 +19,16 @@ public abstract class Ataque {
         this.valorDano = valorDano;
     }
     
-    public abstract void atacar();
+    public String getDescricao() {
+        return this.descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+    
+    public void atacar(){
+        System.out.println(getDescricao());
+        System.out.println(getValorDano());
+    }
 }

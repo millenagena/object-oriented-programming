@@ -10,11 +10,8 @@ package trabalhopoo2;
 public class AtaqueMedio extends Ataque {
     
     public AtaqueMedio(){
-        setValorDano(10);
+        this.setValorDano(5);
+        this.setDescricao("Atacando Medio");
     }
     
-    @Override
-    public void atacar(){
-        System.out.println("ATACANDO MEDIO: " + getValorDano());
-    }
 }

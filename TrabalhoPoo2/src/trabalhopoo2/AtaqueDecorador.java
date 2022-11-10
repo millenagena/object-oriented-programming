@@ -22,8 +22,17 @@ public abstract class AtaqueDecorador extends Ataque{
     }
     
     @Override
-    public void atacar() {
-        System.out.println("COM PODER");
+    public String getDescricao() {
+        return ataqueDecorado.getDescricao() + super.getDescricao();
     }
+    
+    @Override
+    public void atacar(){
+        System.out.println(getDescricao());
+        System.out.println("valor dano: " + getValorDano());
+//        super.atacar();
+//        return ("Atacando Usando poder, valor: "+ getValorDano()+"\n");
+    }
+    
     
 }
