@@ -6,15 +6,15 @@ package trabalhopoo2;
 
 /**
  *
+ * @author mille
  */
-public class AtaqueForte extends Ataque {
-    
-    public AtaqueForte(){
+public class ImperioCurse extends AtaqueDecorador{
+
+    public ImperioCurse(Ataque ataqueDecorador) {
+        super(ataqueDecorador);
         setValorDano(10);
     }
     
-    @Override
-    public void atacar(){
-        System.out.println("ATACANDO FORTEEE: " + getValorDano());
-    }
+    
+    
 }

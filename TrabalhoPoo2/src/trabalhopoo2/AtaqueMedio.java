@@ -8,8 +8,13 @@ package trabalhopoo2;
  *
  */
 public class AtaqueMedio extends Ataque {
+    
+    public AtaqueMedio(){
+        setValorDano(10);
+    }
+    
     @Override
     public void atacar(){
-        System.out.println("ATACANDO MEDIO");
+        System.out.println("ATACANDO MEDIO: " + getValorDano());
     }
 }

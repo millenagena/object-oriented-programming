@@ -8,5 +8,16 @@ package trabalhopoo2;
  *
  */
 public abstract class Ataque {
+    
+    private int valorDano;
+
+    public int getValorDano() {
+        return this.valorDano;
+    }
+
+    public void setValorDano(int valorDano) {
+        this.valorDano = valorDano;
+    }
+    
     public abstract void atacar();
 }

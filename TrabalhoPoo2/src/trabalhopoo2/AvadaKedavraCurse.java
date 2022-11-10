@@ -6,15 +6,11 @@ package trabalhopoo2;
 
 /**
  *
+ * @author mille
  */
-public class AtaqueForte extends Ataque {
-    
-    public AtaqueForte(){
-        setValorDano(10);
-    }
-    
-    @Override
-    public void atacar(){
-        System.out.println("ATACANDO FORTEEE: " + getValorDano());
+public class AvadaKedavraCurse extends AtaqueDecorador{
+    public AvadaKedavraCurse(Ataque ataqueDecorador) {
+        super(ataqueDecorador);
+        setValorDano(30);
     }
 }
